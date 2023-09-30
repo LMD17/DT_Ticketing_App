@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/home_container"
+    tools:context=".activity_home">
+
+    <TextView
+        android:id="@+id/textview_current_ticket"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_extrabold"
+        android:text="Current Tickets"
+        android:textAppearance="@style/textshadow"
+        android:textColor="@color/white"
+        android:textSize="35sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.071" />
+
+    <EditText
+        android:id="@+id/search_bar"
+        android:layout_width="match_parent"
+        android:layout_height="82dp"
+        android:background="#30FFFFFF"
+        android:drawableStart="@drawable/searchicon"
+        android:drawablePadding="5dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:fontFamily="@font/poppins_extrabold"
+        android:hint="Search a Ticket"
+        android:padding="20sp"
+        android:textAppearance="@style/textshadow"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.167" />
+
+    <ScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="407dp"
+        android:layout_height="334dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.673">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp" />
+    </ScrollView>
+
+    <Button
+        android:id="@+id/button_create_ticket"
+        android:layout_width="222dp"
+        android:layout_height="55dp"
+        android:fontFamily="@font/poppins_extrabold"
+        android:text="Create Ticket"
+        android:textAppearance="@style/textshadow"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.907" />
+
+    <TextView
+        android:id="@+id/textview_while_you_wait"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:fontFamily="@font/poppins_extrabold"
+        android:text="While You Wait?"
+        android:textAppearance="@style/textshadow"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.26"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.968" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_troubleshoot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:background="@android:color/transparent"
+        android:fontFamily="@font/poppins_extrabold"
+        android:text="Troubleshoot"
+        android:textColor="#9C27B0"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.315"
+        app:layout_constraintStart_toEndOf="@+id/textview_while_you_wait"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.991" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_sortlist"
+        android:layout_width="72dp"
+        android:layout_height="43dp"
+        android:background="@android:color/transparent"
+        android:drawableLeft="@drawable/home_sort_tickets"
+        android:fontFamily="@font/poppins_extrabold"
+        android:text="Sort"
+        android:textAppearance="@style/textshadow"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.045"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.305" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_menu_icon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/ticket_menu"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.945"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.015" />
+
+    <!--    <androidx.appcompat.widget.AppCompatButton-->
+<!--        android:id="@+id/button_priority"-->
+<!--        android:layout_width="98dp"-->
+<!--        android:layout_height="48dp"-->
+<!--        android:layout_marginEnd="12dp"-->
+<!--        android:backgroundTint="#A354B1"-->
+<!--        android:fontFamily="@font/poppins_extrabold"-->
+<!--        android:textAppearance="@style/textshadow"-->
+<!--        android:textSize="20sp"-->
+<!--        android:background="@color/white"-->
+<!--        android:text="Priority"-->
+<!--        android:visibility="visible"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toStartOf="@+id/button_date"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.306" />-->
+
+    <Button
+        android:id="@+id/button_priority"
+        android:layout_width="115dp"
+        android:layout_height="45dp"
+        android:layout_marginEnd="24dp"
+        android:backgroundTint="#A354B1"
+        android:fontFamily="@font/poppins_extrabold"
+        android:text="PRIORITY"
+        android:textAppearance="@style/textshadow"
+        android:textSize="13sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button_date"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.306" />
+
+    <Button
+        android:id="@+id/button_date"
+        android:layout_width="103dp"
+        android:layout_height="45dp"
+        android:backgroundTint="#A354B1"
+        android:fontFamily="@font/poppins_extrabold"
+        android:text="DATE"
+        android:textAppearance="@style/textshadow"
+        android:textSize="13sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.936"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.306" />
+<!--    <androidx.appcompat.widget.AppCompatButton-->
+<!--        android:id="@+id/button_date"-->
+<!--        android:layout_width="98dp"-->
+<!--        android:layout_height="48dp"-->
+<!--        android:background="@color/white"-->
+<!--        android:text="Date"-->
+<!--        android:visibility="visible"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.936"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.306" />-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>
